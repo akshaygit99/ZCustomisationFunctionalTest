@@ -1,0 +1,26 @@
+{
+    "GetDataByEnvironment" : 
+    [
+        {
+            "environment" : "TestA",
+            "environmentData" :
+            [
+                {
+                "key": "Test",
+                "value": "Test"
+                }
+            ]
+        },
+
+        {
+            "environment" : "TestB",
+            "environmentData" :
+            [
+                 {
+                 "key": "Test",
+                 "value": "Test"
+                 }
+            ]
+        }
+    ]
+}
