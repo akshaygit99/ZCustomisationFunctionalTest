@@ -11,12 +11,11 @@
                   },
                   {
                     "key": "OcpApimSubscriptionKey",
-                    "value": "9d952fe3e9424cd8802cde731b0b224d"
+                    "value": "Key"
                   },
                   {
                     "key": "BearerToken",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im1pZGRsZXdhcmUuY2xpZW50IiwibmJmIjoxNjExNTgyNzY3LCJleHAiOjE2MTIxODc1NjcsImlhdCI6MTYxMTU4Mjc2N30._iYmDwSM_qCmR1Z41kcCDkhNeoWgTRlKYK-gfkCcGpU"
-                  },
+                    "value": "Token"},
                   {
                     "key": "ApiVersion",
                     "value": "v3"
