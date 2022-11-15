@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using TechTalk.SpecFlow;
+namespace ZCustomization
+{
 public class JsonHelper
 {
     public string ReadJsonFile(Table table)
@@ -52,18 +54,14 @@ public class JsonHelper
                 var inputJsonObject = JsonConvert.DeserializeObject<API_Data_Config>(environmentData);
 
                 var envConfig = inputJsonObject.GetDataByEnvironment
-                    .Where(x => x.environment == EnvironmentConfig.getEnvironment()).Select(x => x.environmentData)
-                    .ToList();
-                foreach (var config in envConfig)
+                    .FirstOrDefault(x => x.environment.ToLower() == EnvironmentConfig.getEnvironment().ToLower());
+                foreach (var config in envConfig.environmentData)
                 {
-                    foreach (var item in config)
-                    {
-                        if (item.key == parameter)
-                            parameter = item.value;
-                    }
+                    if (config.key == parameter)
+                        parameter = config.value ?? config.valueFormat;
                 }
                 return parameter;
             }
-
+}
     
 }

@@ -6,6 +6,8 @@ namespace ZCustomization.Config
     {
         public string key { get; set; }
         public string value { get; set; }
+        public string valueFormat { get; set; }
+
 
     }
 

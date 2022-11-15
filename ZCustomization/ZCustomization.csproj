@@ -1,19 +1,51 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="ExtentReports" Version="4.1.0"/>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.0"/>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
     <PackageReference Include="SpecFlow" Version="3.5.14"/>
     <PackageReference Include="SpecFlow.NUnit" Version="3.5.14"/>
     <PackageReference Include="AsciiDocNet" Version="1.0.0-alpha6"/>
     <PackageReference Include="NUnit" Version="3.12.0"/>
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="extent-config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Config/API_Data_Config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Default.srprofile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SpecRunTestProfile.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SpecRunTestProfile_2011_09.xsd">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\"/>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="client-secrets.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestData\TestV3\CreateOrder.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

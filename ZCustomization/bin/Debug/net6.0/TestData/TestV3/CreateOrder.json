@@ -1,0 +1,139 @@
+{
+    "Requestor": null,
+    "CreatedBy": "api.admin@worldemblem.com",
+    "NavAccountNumber": "412436",
+    "TotalQuantity": 0,
+    "ClientReferenceNumber": null,
+    "ExternalOrderNumber": "123ABC123",
+    "CustomerNotes": "that the customer gave us",
+    "OrderFiles": null,
+    "GarmentGroups": [
+        {
+            "GroupingId": 1,
+            "Quantity": 22,
+            "ItemType": {
+                "name": "SHIRT"
+            },
+            "Size": "XL",
+            "Color": "QUIET SHADE",
+            "StyleCode": "CGM692",
+            "Description": "BIRDSEYE POLO",
+            "GarmentDesigns": [],
+            "RequestedShipmentDate": null,
+            "garmentFiles": [
+                {
+                    "fileType": "TagFile",
+                    "url": "https://shop-dev.worldemblem.com/siteassets/decorate-application/uploads/2021/07/01/54321/tagfile/67f87649-f213-4790-a2c0-53290975cee5.pdf",
+                    "supplementalFileUrl": "",
+                    "supplementalFileExtension": "",
+                    "fileName": "labelFileName",
+                    "contentType": null,
+                    "description": null,
+                    "fileSource": null,
+                    "extension": "pdf",
+                    "stitchCount": null,
+                    "widthMM": null,
+                    "heightMM": null,
+                    "Id": 12346
+                },
+                {
+                    "fileType": "LabelFile",
+                    "url": "https://shop-dev.worldemblem.com/siteassets/decorate-application/uploads/2021/07/01/54321/labelfile/48845ce4-ccb6-486e-bf96-940b1acf5444.pdf",
+                    "supplementalFileUrl": "",
+                    "supplementalFileExtension": "",
+                    "fileName": "labelFileName",
+                    "contentType": null,
+                    "description": null,
+                    "fileSource": null,
+                    "extension": "pdf",
+                    "stitchCount": null,
+                    "widthMM": null,
+                    "heightMM": null,
+                    "Id": 12345
+                }
+            ],
+            "operations": [
+               {
+                    "operationType": "CustomerSuppliedDecoration",
+                    "placement": {
+                        "code": "116"
+                    },
+                    "embellishmentMethod": "HeatTransferOnly",
+                    "itemDescription": "CSG Decoration Description",
+                    "bag": null,
+                    "label": null,
+                    "comments": null,
+                    "fileIds": []
+                }
+                
+            ]
+        }
+    ],
+    "GarmentShipFrom": {
+        "Address": {
+            "ContactName": "PEI LOGISTICS/RETURNS ",
+            "CompanyName": "PERRY ELLIS INTERNATIONAL",
+            "Line1": "101 Mountain View Drive",
+            "Line2": "",
+            "City": "SENECA",
+            "State": "SC",
+            "PostalCode": null,
+            "CountryCode": "US",
+            "Country": null,
+            "Phone": null,
+            "Extension": null,
+            "Email": ""
+        },
+        "TrackingNumber": "this-is-the-tracking-number",
+        "TrackingNumbers": []
+    },
+    "ShipToAddresses": [
+        {
+            "Address": {
+                "ContactName": null,
+                "CompanyName": "DIS/VET ENTERPRISES",
+                "Line1": "W226N825 EASTMOUND DR STE C D",
+                "Line2": "",
+                "City": "WAUKESHA",
+                "State": "WI",
+                "PostalCode": "53186",
+                "CountryCode": "US",
+                "Country": null,
+                "Phone": null,
+                "Extension": null,
+                "Email": null
+            },
+            "ShipVia": "FedEx Ground",
+            "PONumber": "test data",
+            "CustomerShippingAccount": "774534598",
+            "ShippingAccountZipCode": null,
+            "GroupingIds": [
+                1
+            ]
+        }
+    ],
+    "NotificationUrl": null,
+    "BillToAddress": {
+        "ContactName": null,
+        "CompanyName": "DIS/VET ENTERPRISES INC",
+        "Line1": "PO BOX 67",
+        "Line2": "",
+        "City": "PEWAUKEE",
+        "State": "WI",
+        "PostalCode": "53072",
+        "CountryCode": "US",
+        "Country": null,
+        "Phone": null,
+        "Extension": null,
+        "Email": null
+    },
+    "ManufacturingLocation": {
+        "AddressNickname": "Atlanta GA"
+    },
+    "OrderReference1": null,
+    "OrderReference2": null,
+    "OrderReference3": null,
+    "OrderReference4": null,
+    "OrderReference5": null,
+    "NotificationList": null
+}

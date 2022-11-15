@@ -26,11 +26,13 @@ namespace ZCustomization
             public int responseTimeInMilliseconds;
         }
 
-    public ApiResponse getApiResponse(string endpoint, string methodType, string jsonInput)
+    public ApiResponse getApiResponse(string sut, string endpoint, string methodType, string jsonInput, string pathParameters=null)
     {
 
         ApiResponse response = new ApiResponse();
-
+        client = getClientConfiguration(sut, endpoint, methodType, jsonInput);
+        var requestUrl = $"{client.BaseAddress}{pathParameters ?? ""}";
+        Console.WriteLine($"Making {methodType} request to {requestUrl}");
 
         try
         {
@@ -91,7 +93,38 @@ namespace ZCustomization
 
     }
 
-    public ApiResponse getAllData(Task<HttpResponseMessage> responseTask, Stopwatch timer)
+        public HttpClient getClientConfiguration(string sut, string endpoint, string methodType, string jsonInput)
+        {
+            HttpClient localClient = new HttpClient();
+            switch (sut.ToLower())
+            {
+                case "customerapi":
+                    string caBaseURL = jsonHelper.GetDataByEnvironment("BaseUrl");
+                    var url = buildRequestUrl(caBaseURL, endpoint, methodType, jsonInput);
+                    localClient.BaseAddress = new Uri(url);
+                    localClient.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", jsonHelper.GetDataByEnvironment("OcpApimSubscriptionKey"));
+                    localClient.DefaultRequestHeaders.Add("Ocp-Apim-Trace", "true");
+                    return localClient;
+
+                default:
+                return localClient;
+            }
+        }
+
+        public string buildRequestUrl(string baseURL, string endpoint, string methodType, string jsonInput)
+        {
+             if (baseURL == "BaseUrl" || baseURL == "MwBaseUrl")
+                baseURL = null;
+            requestUrl = baseURL + endpoint;
+            if ((methodType.ToLower() == "get" || methodType.ToLower() == "delete") && jsonInput != null)
+            {
+                requestUrl = jsonHelper.BuildRequestURL(requestUrl, jsonInput);
+            }
+            System.Threading.Thread.Sleep(3000);
+            return requestUrl;
+        }
+
+        public ApiResponse getAllData(Task<HttpResponseMessage> responseTask, Stopwatch timer)
     {
         ApiResponse apiResponse = new ApiResponse
         {

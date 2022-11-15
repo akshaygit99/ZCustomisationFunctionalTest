@@ -1,0 +1,42 @@
+{
+    "GetDataByEnvironment" : 
+    [
+        {
+            "environment" : "TestV3",
+            "environmentData" :
+            [
+                  {
+                    "key": "BaseUrl",
+                    "value": "https://we.azure-api.net/v3-test"
+                  },
+                  {
+                    "key": "OcpApimSubscriptionKey",
+                    "value": "9d952fe3e9424cd8802cde731b0b224d"
+                  },
+                  {
+                    "key": "BearerToken",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im1pZGRsZXdhcmUuY2xpZW50IiwibmJmIjoxNjExNTgyNzY3LCJleHAiOjE2MTIxODc1NjcsImlhdCI6MTYxMTU4Mjc2N30._iYmDwSM_qCmR1Z41kcCDkhNeoWgTRlKYK-gfkCcGpU"
+                  },
+                  {
+                    "key": "ApiVersion",
+                    "value": "v3"
+                  },
+                  {
+                    "key": "CreateOrders",
+                    "value": "/decorate-csg-order"
+                  }
+            ]
+        },
+
+        {
+            "environment" : "TestB",
+            "environmentData" :
+            [
+                 {
+                 "key": "Test",
+                 "value": "Test"
+                 }
+            ]
+        }
+    ]
+}
