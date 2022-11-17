@@ -1,6 +1,6 @@
 Feature: Order Create
 
-@akki
+@testv3
 Scenario: Create Order
 	Given I have a 'POST' API 'CreateOrders'
 	And I have a json input file
