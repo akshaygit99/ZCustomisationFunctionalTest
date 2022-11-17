@@ -1,4 +1,4 @@
-@testV3
+@zoho
 Feature: Order Create
 
 Scenario: Create Order
