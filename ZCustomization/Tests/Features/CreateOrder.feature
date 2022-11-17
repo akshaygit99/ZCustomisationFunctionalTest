@@ -1,4 +1,4 @@
-@testv3
+@testV3
 Feature: Order Create
 
 Scenario: Create Order
