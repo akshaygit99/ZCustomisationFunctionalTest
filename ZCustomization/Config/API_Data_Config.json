@@ -11,14 +11,7 @@
                   },
                   {
                     "key": "OcpApimSubscriptionKey",
-                    "value": "Key"
-                  },
-                  {
-                    "key": "BearerToken",
-                    "value": "Token"},
-                  {
-                    "key": "ApiVersion",
-                    "value": "v3"
+                    "value": "9d952fe3e9424cd8802cde731b0b224d"
                   },
                   {
                     "key": "CreateOrders",
