@@ -43,7 +43,7 @@
     <None Update="client-secrets.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="TestData\TestV3\CreateOrder.json">
+    <None Update="TestData/TestV3/CreateOrder.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
