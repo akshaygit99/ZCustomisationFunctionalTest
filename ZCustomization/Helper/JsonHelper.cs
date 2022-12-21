@@ -29,7 +29,7 @@ public class JsonHelper
 
      public string BuildRequestURL(string requestUrl, string jsonInputParams)
             {
-                if (jsonInputParams == null)
+                if (string.IsNullOrWhiteSpace(jsonInputParams))
                 {
                     return requestUrl;
                 }
