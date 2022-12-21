@@ -40,7 +40,7 @@ namespace ZCustomization
             {
                 case "get":
                     timer.Start();
-                    var responseTask = client.GetAsync(client.BaseAddress);
+                    var responseTask = client.GetAsync(requestUrl);
                     responseTask.Wait();
                     timer.Stop();
                     response = getAllData(responseTask,timer);
